@@ -77,7 +77,7 @@ export default function Home() {
 
 			<main className='flex flex-col gap-[150px] font-[Unbounded] items-center'>
 				<section className='flex flex-col max-w-[1920px] w-full h-[865px] items-center justify-center'>
-					<div className='bg-[url(/assets/bg-section.png)] bg-cover bg-center bg-no-repeat w-full flex justify-center items-end h-full'>
+					<div className='bg-[url(assets/bg-section.png)] bg-cover bg-center bg-no-repeat w-full flex justify-center items-end h-full'>
 						<div className='flex flex-col gap-12 py-12 px-16 items-center rounded-2xl bg-[rgba(0,0,0,_0.08)] backdrop-blur-[32px] shadow-[0px_0px_48px_0px_rgba(181,_194,_227,_0.16)_inset] border-2 border-white max-w-[936px] w-full relative'>
 							<p className='text-[50px] font-semibold uppercase text-white text-center'>
 								MAXIMIZE YOUR PROFIT WITH SLOTS'N'GO
@@ -109,7 +109,7 @@ export default function Home() {
 					<h2 className='text-[41px] font-semibold uppercase text-white text-center'>Slots'n'go benefits</h2>
 					<div className='flex gap-6 flex-wrap'>
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-1.png'
 									className='mx-auto'
@@ -124,7 +124,7 @@ export default function Home() {
 						</div>
 
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-2.png'
 									className='mx-auto'
@@ -139,7 +139,7 @@ export default function Home() {
 						</div>
 
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-3.png'
 									className='mx-auto'
@@ -154,7 +154,7 @@ export default function Home() {
 						</div>
 
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-4.png'
 									className='mx-auto'
@@ -169,7 +169,7 @@ export default function Home() {
 						</div>
 
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-5.png'
 									className='mx-auto'
@@ -184,7 +184,7 @@ export default function Home() {
 						</div>
 
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-6.png'
 									className='mx-auto'
@@ -226,7 +226,7 @@ export default function Home() {
 					<div className='flex gap-6 flex-row items-start'>
 						<div className='flex flex-col items-center justify-center gap-6 pb-8 rounded-2xl bg-[rgba(0,0,0,0.08)] max-w-[454px] w-full'>
 							<img
-								src='/assets/card-1.png'
+								src='assets/card-1.png'
 								alt='card-1'
 							/>
 							<div className='px-8 flex flex-col gap-6'>
@@ -242,7 +242,7 @@ export default function Home() {
 
 						<div className='flex flex-col items-center justify-center gap-6 pb-8 rounded-2xl bg-[rgba(0,0,0,0.08)] max-w-[454px] w-full h-full'>
 							<img
-								src='/assets/card-2.png'
+								src='assets/card-2.png'
 								alt='card-2'
 							/>
 							<div className='px-8 flex flex-col gap-6'>
@@ -257,7 +257,7 @@ export default function Home() {
 
 						<div className='flex flex-col items-center justify-center gap-6 pb-8 rounded-2xl bg-[rgba(0,0,0,0.08)] max-w-[454px] w-full'>
 							<img
-								src='/assets/card-3.png'
+								src='assets/card-3.png'
 								alt='card-3'
 							/>
 							<div className='px-8 flex flex-col gap-6'>
@@ -275,7 +275,7 @@ export default function Home() {
 				</section>
 
 				<section className='flex justify-center items-center w-full px-14'>
-					<div className='flex flex-row max-w-[1170px] w-full items-start gap-6 rounded-2xl bg-[rgba(255,_255,_255,_0.04)] pl-14 py-14 relative bg-[url(/assets/bg-banner.png)] bg-cover bg-center bg-no-repeat'>
+					<div className='flex flex-row max-w-[1170px] w-full items-start gap-6 rounded-2xl bg-[rgba(255,_255,_255,_0.04)] pl-14 py-14 relative bg-[url(assets/bg-banner.png)] bg-cover bg-center bg-no-repeat'>
 						<div className='flex flex-col gap-6 max-w-[530px]'>
 							<div className='flex gap-4 flex-col items-start'>
 								<p className='text-white text-[32px] font-semibold uppercase'>
@@ -292,23 +292,23 @@ export default function Home() {
 						<div className='min-w-[438px] h-[1px]'>
 							<img
 								className='absolute bottom-0 right-0'
-								src='/assets/woman.png'
+								src='assets/woman.png'
 								alt='woman'
 							/>
 						</div>
 						<img
 							className='absolute -top-16 right-[45%]'
-							src='/assets/coin-1.png'
+							src='assets/coin-1.png'
 							alt='coin'
 						/>
 						<img
 							className='absolute -bottom-16 -left-18'
-							src='/assets/coin-2.png'
+							src='assets/coin-2.png'
 							alt='coin'
 						/>
 						<img
 							className='absolute -bottom-22 right-[31%]'
-							src='/assets/heart.png'
+							src='assets/heart.png'
 							alt='heart'
 						/>
 					</div>
@@ -350,7 +350,7 @@ export default function Home() {
 			</main>
 
 			<footer
-				className='bg-[url(/assets/bg-footer.svg)] h-[500px] flex items-end px-4'
+				className='bg-[url(assets/bg-footer.svg)] h-[500px] flex items-end px-4'
 				id='contacts'
 			>
 				<div className='w-full max-w-[1114px] mx-auto mb-16'>

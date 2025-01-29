@@ -8,7 +8,7 @@ export default function Terms() {
 				<div className='flex justify-between items-center max-w-[1406px] w-full mx-auto'>
 					<Link href='/'>
 						<img
-							src='src/assets/logo.svg'
+							src='assets/logo.svg'
 							alt='logo'
 						/>
 					</Link>
@@ -334,7 +334,7 @@ export default function Terms() {
 				</div>
 			</main>
 			<section className='flex justify-center items-center my-32'>
-				<div className='flex flex-row max-w-[1170px] w-full items-start gap-6 rounded-2xl bg-[rgba(255,_255,_255,_0.06)] pl-14 py-14 relative bg-[url(/src/assets/bg-banner.png)] bg-cover bg-center bg-no-repeat'>
+				<div className='flex flex-row max-w-[1170px] w-full items-start gap-6 rounded-2xl bg-[rgba(255,_255,_255,_0.06)] pl-14 py-14 relative bg-[url(assets/bg-banner.png)] bg-cover bg-center bg-no-repeat'>
 					<div className='flex flex-col gap-6 max-w-[530px]'>
 						<div className='flex gap-4 flex-col items-start'>
 							<p className='text-white text-[32px] font-semibold uppercase'>
@@ -356,29 +356,29 @@ export default function Terms() {
 					<div className='min-w-[438px] h-[1px]'>
 						<img
 							className='absolute bottom-0 right-0'
-							src='/src/assets/woman.png'
+							src='assets/woman.png'
 							alt='woman'
 						/>
 					</div>
 					<img
 						className='absolute -top-16 right-[45%]'
-						src='/src/assets/coin-1.png'
+						src='assets/coin-1.png'
 						alt='coin'
 					/>
 					<img
 						className='absolute -bottom-16 -left-18'
-						src='/src/assets/coin-2.png'
+						src='assets/coin-2.png'
 						alt='coin'
 					/>
 					<img
 						className='absolute -bottom-22 right-[31%]'
-						src='/src/assets/heart.png'
+						src='assets/heart.png'
 						alt='heart'
 					/>
 				</div>
 			</section>
 			<footer
-				className='bg-[url(/src/assets/bg-footer.svg)] h-[500px] flex items-end px-4'
+				className='bg-[url(assets/bg-footer.svg)] h-[500px] flex items-end px-4'
 				id='contacts'
 			>
 				<div className='w-full max-w-[1114px] mx-auto mb-16'>

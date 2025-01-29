@@ -12,31 +12,31 @@ const advantages: Advantage[] = [
 		title: 'Direct Offers for Maximum Earnings',
 		description:
 			'Tired of losing 10% to 50% of your profits by working through CPA networks? Partner with us directly and keep more of your hard-earned money!',
-		icon: '/assets/icon-1.svg',
+		icon: 'assets/icon-1.svg',
 	},
 	{
 		title: 'Flexible Payouts at Your Fingertips',
 		description:
 			'Earn up to $50 per CPA and up to 45% revenue share and enjoy multiple withdrawal options. Qualifying webmasters can access growth loans!',
-		icon: '/assets/icon-2.svg',
+		icon: 'assets/icon-2.svg',
 	},
 	{
 		title: 'Comprehensive Statistics at Your Side',
 		description:
 			'Our advanced tracking ensures you stay informed with every click and conversion, helping you optimize your strategy effectively.',
-		icon: '/assets/icon-3.svg',
+		icon: 'assets/icon-3.svg',
 	},
 	{
 		title: 'Unique Promo Codes',
 		description:
 			'Motivate your players to register and enjoy deposit bonuses that keep them coming back for more with unique promo codes!',
-		icon: '/assets/icon-4.svg',
+		icon: 'assets/icon-4.svg',
 	},
 	{
 		title: 'Tailored Localization for Higher Conversions',
 		description:
 			'We provide professional localization of dfferent materials to boost your connection with the audience, enhancing conversion rates by up to 30%!',
-		icon: '/assets/icon-5.svg',
+		icon: 'assets/icon-5.svg',
 	},
 ];
 
