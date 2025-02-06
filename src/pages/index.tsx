@@ -93,7 +93,7 @@ export default function Home() {
 					className='flex flex-col max-w-[1920px] w-full h-[865px] max-md:h-[530px] items-center justify-center max-md:justify-start'
 					id='partners'
 				>
-					<div className='bg-[url(/assets/bg-section.png)] max-md:bg-[url(/assets/bg-section-mobile.png)] bg-cover max-md:bg-contain bg-center max-md:bg-top bg-no-repeat w-full flex justify-center items-end h-full max-md:-mt-12'>
+					<div className='bg-[url(../assets/bg-section.png)] max-md:bg-[url(/assets/bg-section-mobile.png)] bg-cover max-md:bg-contain bg-center max-md:bg-top bg-no-repeat w-full flex justify-center items-end h-full max-md:-mt-12'>
 						<div className='flex flex-col gap-12 max-md:gap-0 py-12 px-16 max-md:px-4 max-md:py-4 max-md:mx-4 items-center rounded-2xl bg-[rgba(0,0,0,_0.08)] backdrop-blur-[32px] shadow-[0px_0px_48px_0px_rgba(181,_194,_227,_0.16)_inset] border-2 border-white max-w-[936px] w-full relative'>
 							<p className='text-[50px] font-semibold uppercase text-white text-center max-md:text-[17px]'>
 								MAXIMIZE YOUR PROFIT WITH SLOTS'N'GO
@@ -448,7 +448,7 @@ export default function Home() {
 						</p>
 						<Link
 							className='text-[#E7D6B6] text-sm font-semibold uppercase font-[Inter] max-md:text-center'
-							href='/terms.html'
+							href='/terms'
 						>
 							terms and conditions
 						</Link>

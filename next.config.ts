@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
 	reactStrictMode: true,
 	output: 'export',
 	basePath: '/landing',
-	
+	trailingSlash: true,
 };
 
 export default nextConfig;
