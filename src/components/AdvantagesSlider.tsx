@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
+import { useMediaQuery } from 'usehooks-ts';
 
 interface Advantage {
 	title: string;
@@ -44,6 +45,10 @@ export const AdvantagesSlider = () => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const cardsContainerRef = useRef<HTMLDivElement>(null);
 	const [shouldIntercept, setShouldIntercept] = useState(false);
+	const isMobile = useMediaQuery('(max-width: 768px)', {
+		initializeWithValue: false,
+	});
+	const width = isMobile ? 346 + 8 : 390 + 8;
 
 	const { scrollYProgress } = useScroll({
 		target: containerRef,
@@ -52,7 +57,7 @@ export const AdvantagesSlider = () => {
 
 	const springConfig = { stiffness: 300, damping: 30, restDelta: 0.001 };
 	const x = useSpring(
-		useTransform(scrollYProgress, [0.3, 0.7], [0, -(advantages.length - 3) * 398]), // 390px width + 8px gap
+		useTransform(scrollYProgress, [0.3, 0.7], [0, -(advantages.length - 3) * width]), // 390px width + 8px gap
 		springConfig,
 	);
 
@@ -87,18 +92,18 @@ export const AdvantagesSlider = () => {
 
 			e.preventDefault();
 			const newX = x.get() - e.deltaY;
-			const maxScroll = -(advantages.length - 3) * 398;
+			const maxScroll = -(advantages.length - 3) * width;
 			x.set(Math.max(Math.min(newX, 0), maxScroll));
 		};
 
 		window.addEventListener('wheel', handleWheel, { passive: false });
 		return () => window.removeEventListener('wheel', handleWheel);
-	}, [x, shouldIntercept]);
+	}, [x, shouldIntercept, width]);
 
 	return (
 		<div
 			ref={containerRef}
-			className='flex-1 overflow-hidden'
+			className='flex-1 overflow-hidden max-w-screen'
 		>
 			<motion.div
 				ref={cardsContainerRef}
@@ -108,7 +113,7 @@ export const AdvantagesSlider = () => {
 				{advantages.map((advantage) => (
 					<motion.div
 						key={advantage.title}
-						className='flex flex-col items-start gap-6 rounded-2xl border border-white bg-[rgba(236,_142,_244,_0.04)] shadow-[0px_0px_48px_0px_rgba(181,_194,_227,_0.16)_inset] px-8 pb-8 pt-6 w-[390px] flex-shrink-0'
+						className='flex flex-col items-start gap-6 rounded-2xl border border-white bg-[rgba(236,_142,_244,_0.04)] shadow-[0px_0px_48px_0px_rgba(181,_194,_227,_0.16)_inset] px-8 pb-8 pt-6 w-[390px] max-md:w-[346px] flex-shrink-0'
 					>
 						<div className='flex p-[10px] justify-center items-center rounded-full bg-[rgba(255,_255,_255,_0.04)]'>
 							<img

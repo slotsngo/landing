@@ -37,6 +37,31 @@ export const faqData: FaqSection[] = [
 				answer:
 					'Success comes from understanding your audience, using our marketing tools effectively, and maintaining regular communication with your affiliate manager who can provide valuable insights and support.',
 			},
+			{
+				question: "How to become a Partner of the Slots'n'go Affiliate Program?",
+				answer:
+					'To become a Partner, simply register on our platform, fill in your profile information, and our manager will contact you to discuss the details of cooperation. We welcome both experienced affiliates and newcomers to the industry!',
+			},
+			{
+				question: 'What are the time limits within which invited players bring revenue?',
+				answer:
+					"Players you refer remain linked to your account indefinitely. You'll continue earning commission from their activity as long as they remain active on our platform.",
+			},
+			{
+				question: "Can I trust the Slots'n'go Affiliate Program?",
+				answer:
+					'Absolutely! We are a licensed and regulated platform with years of experience in the industry. We maintain transparent reporting and ensure timely payments to all our partners.',
+			},
+			{
+				question: 'How can I get promo materials for advertisements?',
+				answer:
+					'All promotional materials are available in your partner dashboard. We regularly update our banners, landing pages, and other marketing tools to help you maximize conversions.',
+			},
+			{
+				question: "How can I become a successful webmaster with Slots'n'go?",
+				answer:
+					'Success comes from understanding your audience, using our marketing tools effectively, and maintaining regular communication with your affiliate manager who can provide valuable insights and support.',
+			},
 		],
 	},
 	{

@@ -30,10 +30,13 @@ export default function Home() {
 						src='assets/logo.svg'
 						alt='logo'
 					/>
-					<div className='flex gap-5 font-[Inter]'>
-						<a className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase cursor-pointer'>
-							{' '}
-							Slots'n'go Partners{' '}
+					<div className='flex gap-5 font-[Inter] max-md:hidden'>
+						<a
+							onClick={(e) => smoothScroll(e, 'partners')}
+							href='#partners'
+							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase cursor-pointer'
+						>
+							Slots'n'go Partners
 						</a>
 						<a
 							onClick={(e) => smoothScroll(e, 'benefits')}
@@ -71,30 +74,43 @@ export default function Home() {
 							Contacts
 						</a>
 					</div>
-					<a className='button'>My Account</a>
+					<div className='max-md:hidden'>
+						<a className='button'>My Account</a>
+					</div>
+					<div className='max-md:block hidden'>
+						<a className='button-mobile'>
+							<img
+								src='assets/account.svg'
+								alt='account'
+							/>
+						</a>
+					</div>
 				</div>
 			</header>
 
-			<main className='flex flex-col gap-[150px] font-[Unbounded] items-center'>
-				<section className='flex flex-col max-w-[1920px] w-full h-[865px] items-center justify-center'>
-					<div className='bg-[url(/landing/assets/bg-section.png)] bg-cover bg-center bg-no-repeat w-full flex justify-center items-end h-full'>
-						<div className='flex flex-col gap-12 py-12 px-16 items-center rounded-2xl bg-[rgba(0,0,0,_0.08)] backdrop-blur-[32px] shadow-[0px_0px_48px_0px_rgba(181,_194,_227,_0.16)_inset] border-2 border-white max-w-[936px] w-full relative'>
-							<p className='text-[50px] font-semibold uppercase text-white text-center'>
+			<main className='flex flex-col gap-[150px] max-md:gap-8 font-[Unbounded] items-center'>
+				<section
+					className='flex flex-col max-w-[1920px] w-full h-[865px] max-md:h-[530px] items-center justify-center max-md:justify-start'
+					id='partners'
+				>
+					<div className='bg-[url(/assets/bg-section.png)] max-md:bg-[url(/assets/bg-section-mobile.png)] bg-cover max-md:bg-contain bg-center max-md:bg-top bg-no-repeat w-full flex justify-center items-end h-full max-md:-mt-12'>
+						<div className='flex flex-col gap-12 max-md:gap-0 py-12 px-16 max-md:px-4 max-md:py-4 max-md:mx-4 items-center rounded-2xl bg-[rgba(0,0,0,_0.08)] backdrop-blur-[32px] shadow-[0px_0px_48px_0px_rgba(181,_194,_227,_0.16)_inset] border-2 border-white max-w-[936px] w-full relative'>
+							<p className='text-[50px] font-semibold uppercase text-white text-center max-md:text-[17px]'>
 								MAXIMIZE YOUR PROFIT WITH SLOTS'N'GO
 							</p>
 							<div className='flex flex-col justify-center items-center'>
-								<p className='text-2xl/[72px] font-semibold uppercase text-[#E7D6B6] text-center font-[Inter]'>
+								<p className='text-2xl/[72px] max-md:text-[11px]/[50px] font-semibold uppercase text-[#E7D6B6] text-center font-[Inter]'>
 									Become an Affiliate Partner Today!
 								</p>
 								<a className='button'>My Account</a>
 							</div>
 							<img
-								className='absolute -right-44'
+								className='absolute -right-44 max-md:w-[40%] max-md:-right-8 max-md:-bottom-17'
 								src='assets/777-1.png'
 								alt='777-1'
 							/>
 							<img
-								className='absolute -bottom-20 -left-48'
+								className='absolute -bottom-20 -left-48 max-md:w-[40%] max-md:-bottom-12 max-md:-left-11'
 								src='assets/777-2.png'
 								alt='777-2'
 							/>
@@ -106,10 +122,12 @@ export default function Home() {
 					className='flex flex-col gap-10 max-w-[1448px] w-full px-4'
 					id='benefits'
 				>
-					<h2 className='text-[41px] font-semibold uppercase text-white text-center'>Slots'n'go benefits</h2>
+					<h2 className='text-[41px] max-md:text-[21px] font-semibold uppercase text-white text-center'>
+						Slots'n'go benefits
+					</h2>
 					<div className='flex gap-6 flex-wrap'>
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/landing/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-1.png'
 									className='mx-auto'
@@ -124,7 +142,7 @@ export default function Home() {
 						</div>
 
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/landing/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-2.png'
 									className='mx-auto'
@@ -139,7 +157,7 @@ export default function Home() {
 						</div>
 
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/landing/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-3.png'
 									className='mx-auto'
@@ -154,7 +172,7 @@ export default function Home() {
 						</div>
 
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/landing/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-4.png'
 									className='mx-auto'
@@ -169,7 +187,7 @@ export default function Home() {
 						</div>
 
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/landing/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-5.png'
 									className='mx-auto'
@@ -184,7 +202,7 @@ export default function Home() {
 						</div>
 
 						<div className='flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full'>
-							<div className='bg-[url(/landing/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
+							<div className='bg-[url(/assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full'>
 								<img
 									src='assets/benefits-6.png'
 									className='mx-auto'
@@ -200,21 +218,24 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className='flex gap-16 pl-4 overflow-hidden max-w-[1448px] items-center'>
-					<div className='flex flex-col gap-4 justify-center items-center h-full'>
-						<h2 className='text-[41px] font-semibold uppercase text-white text-start'>
-							UNIQUE
-							<br />
-							Advantages
-							<br />
-							for webmasters
-						</h2>
-					</div>
+				<section
+					className='flex max-md:flex-col gap-16 pl-4 overflow-hidden max-w-[1448px] w-full items-center'
+					id='about-us'
+				>
+					<h2 className='text-[41px] max-md:text-[21px] font-semibold uppercase text-white text-start max-md:text-center'>
+						UNIQUE
+						<br />
+						Advantages
+						<br />
+						for webmasters
+					</h2>
 					<AdvantagesSlider />
 				</section>
 
 				<section className='flex flex-col gap-8'>
-					<h2 className='text-[41px] font-semibold uppercase text-white text-center'>Pros for players</h2>
+					<h2 className='text-[41px] max-md:text-[21px] font-semibold uppercase text-white text-center'>
+						Pros for players
+					</h2>
 					<PlayerProsSlider />
 				</section>
 
@@ -222,10 +243,13 @@ export default function Home() {
 					className='flex flex-col gap-8 px-4'
 					id='cooperation-models'
 				>
-					<h2 className='text-[41px] font-semibold uppercase text-white text-center'>Cooperation Models</h2>
-					<div className='flex gap-6 flex-row items-start'>
+					<h2 className='text-[41px] max-md:text-[21px] font-semibold uppercase text-white text-center'>
+						Cooperation Models
+					</h2>
+					<div className='flex gap-6 flex-row max-md:flex-col items-start'>
 						<div className='flex flex-col items-center justify-center gap-6 pb-8 rounded-2xl bg-[rgba(0,0,0,0.08)] max-w-[454px] w-full'>
 							<img
+								className='rounded-t-2xl'
 								src='assets/card-1.png'
 								alt='card-1'
 							/>
@@ -242,6 +266,7 @@ export default function Home() {
 
 						<div className='flex flex-col items-center justify-center gap-6 pb-8 rounded-2xl bg-[rgba(0,0,0,0.08)] max-w-[454px] w-full h-full'>
 							<img
+								className='rounded-t-2xl'
 								src='assets/card-2.png'
 								alt='card-2'
 							/>
@@ -257,6 +282,7 @@ export default function Home() {
 
 						<div className='flex flex-col items-center justify-center gap-6 pb-8 rounded-2xl bg-[rgba(0,0,0,0.08)] max-w-[454px] w-full'>
 							<img
+								className='rounded-t-2xl'
 								src='assets/card-3.png'
 								alt='card-3'
 							/>
@@ -274,8 +300,8 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className='flex justify-center items-center w-full px-14'>
-					<div className='flex flex-row max-w-[1170px] w-full items-start gap-6 rounded-2xl bg-[rgba(255,_255,_255,_0.04)] pl-14 py-14 relative bg-[url(/landing/assets/bg-banner.png)] bg-cover bg-center bg-no-repeat'>
+				<section className='flex justify-center items-center w-full px-14 max-md:hidden'>
+					<div className='flex flex-row max-w-[1170px] w-full items-start gap-6 rounded-2xl bg-[rgba(255,_255,_255,_0.04)] pl-14 py-14 relative bg-[url(/assets/bg-banner.png)] bg-cover bg-center bg-no-repeat'>
 						<div className='flex flex-col gap-6 max-w-[530px]'>
 							<div className='flex gap-4 flex-col items-start'>
 								<p className='text-white text-[32px] font-semibold uppercase'>
@@ -314,11 +340,54 @@ export default function Home() {
 					</div>
 				</section>
 
+				<section className='flex-col gap-8 hidden max-md:flex'>
+					<div className='flex flex-col relative'>
+						<img
+							className='absolute top-0 z-10 w-[25%]'
+							src='assets/coin-1.png'
+							alt='coin'
+						/>
+						<img
+							className='absolute -bottom-10 -left-5 z-10 w-[25%]'
+							src='assets/coin-2.png'
+							alt='coin'
+						/>
+						<div className='relative overflow-hidden'>
+							<img
+								className='absolute -right-10 bottom-0 z-10 w-[25%]'
+								src='assets/heart.png'
+								alt='heart'
+							/>
+							<img
+								className='w-full'
+								src='assets/woman-mobile.png'
+								alt='woman-mobile'
+							/>
+						</div>
+						<div className='px-4 -mt-7'>
+							<div className='flex flex-col gap-4 pt-4 pb-8 px-5 items-center rounded-2xl bg-[rgba(0,0,0,_0.08)] backdrop-blur-[32px] shadow-[0px_0px_48px_0px_rgba(181,_194,_227,_0.16)_inset] border-2 border-white w-full relative'>
+								<p className='font-semibold uppercase text-white text-center text-[17px]'>
+									START EARNING WITH US TODAY!
+								</p>
+								<div className='flex flex-col justify-center items-center '>
+									<p className='text-[11px] font-semibold uppercase text-[#E7D6B6] text-center font-[Inter]'>
+										Once you sign up, our manager will reach out to answer any questions you may have and help you get
+										started on your journey to profit!
+									</p>
+								</div>
+								<a className='button'>My Account</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
 				<section
 					className='flex flex-col gap-8 px-4'
 					id='faq'
 				>
-					<h2 className='text-[41px] font-semibold uppercase text-white text-center'>Frequently Asked Questions</h2>
+					<h2 className='text-[41px] max-md:text-[21px] font-semibold uppercase text-white text-center'>
+						Frequently Asked Questions
+					</h2>
 					<div className='flex flex-col max-w-[1400px] mx-auto w-full'>
 						{faqData.map((section, sectionIndex) => (
 							<div
@@ -334,7 +403,7 @@ export default function Home() {
 									</p>
 									<div className='w-full h-[1px] bg-[rgba(255,_255,_255,_0.16)]'></div>
 								</div>
-								<div className='grid grid-cols-2 gap-x-20 gap-y-2 mb-8'>
+								<div className='grid grid-cols-2 max-md:grid-cols-1 gap-x-20 gap-y-2 mb-8'>
 									{section.items.map((item, index) => (
 										<FaqItem
 											key={`${sectionIndex}-${index}`}
@@ -350,31 +419,35 @@ export default function Home() {
 			</main>
 
 			<footer
-				className='bg-[url(/landing/assets/bg-footer.svg)] h-[500px] flex items-end px-4'
+				className='bg-[url(/assets/bg-footer.svg)] h-[500px] flex items-end px-4'
 				id='contacts'
 			>
-				<div className='w-full max-w-[1114px] mx-auto mb-16'>
-					<p className='text-[32px]/[74px] font-semibold uppercase text-white font-[Unbounded]'>CONTACTS</p>
-					<div className='flex gap-[88px] mt-[33px] mb-[86px] flex-wrap'>
-						<div className='flex flex-col gap-4 items-start'>
+				<div className='w-full max-w-[1114px] mx-auto mb-16 max-md:mb-8'>
+					<p className='text-[32px]/[74px] font-semibold uppercase text-white font-[Unbounded] max-md:text-center'>
+						CONTACTS
+					</p>
+					<div className='flex gap-[88px] max-md:gap-6 mt-[33px] max-md:mt-6 mb-[86px] max-md:mb-11 flex-wrap max-md:flex-col'>
+						<div className='flex flex-col gap-4 max-md:gap-1 items-start max-md:items-center'>
 							<p className='text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter]'>
 								Email address for additional information
 							</p>
-							<p className='text-white text-[26px] font-semibold uppercase font-[Unbounded]'>
+							<p className='text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]'>
 								partner.support@slotsngo.io
 							</p>
 						</div>
-						<div className='flex flex-col gap-4 items-start'>
+						<div className='flex flex-col gap-4 max-md:gap-1 items-start max-md:items-center'>
 							<p className='text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter]'>telegram</p>
-							<p className='text-white text-[26px] font-semibold uppercase font-[Unbounded]'>@slotsngo_support</p>
+							<p className='text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]'>
+								@slotsngo_support
+							</p>
 						</div>
 					</div>
-					<div className='flex flex-row gap-10'>
-						<p className='text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter]'>
+					<div className='flex flex-row gap-10 max-md:flex-col-reverse max-md:items-center'>
+						<p className='text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter] max-md:text-center'>
 							ALL RIGHTS RESERVED ©2024 — partners.slotsngo.io
 						</p>
 						<Link
-							className='text-[#E7D6B6] text-sm font-semibold uppercase font-[Inter]'
+							className='text-[#E7D6B6] text-sm font-semibold uppercase font-[Inter] max-md:text-center'
 							href='/terms.html'
 						>
 							terms and conditions

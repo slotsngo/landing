@@ -334,7 +334,7 @@ export default function Terms() {
 				</div>
 			</main>
 			<section className='flex justify-center items-center my-32'>
-				<div className='flex flex-row max-w-[1170px] w-full items-start gap-6 rounded-2xl bg-[rgba(255,_255,_255,_0.06)] pl-14 py-14 relative bg-[url(/landing/assets/bg-banner.png)] bg-cover bg-center bg-no-repeat'>
+				<div className='flex flex-row max-w-[1170px] w-full items-start gap-6 rounded-2xl bg-[rgba(255,_255,_255,_0.06)] pl-14 py-14 relative bg-[url(/assets/bg-banner.png)] bg-cover bg-center bg-no-repeat'>
 					<div className='flex flex-col gap-6 max-w-[530px]'>
 						<div className='flex gap-4 flex-col items-start'>
 							<p className='text-white text-[32px] font-semibold uppercase'>
@@ -378,7 +378,7 @@ export default function Terms() {
 				</div>
 			</section>
 			<footer
-				className='bg-[url(/landing/assets/bg-footer.svg)] h-[500px] flex items-end px-4'
+				className='bg-[url(/assets/bg-footer.svg)] h-[500px] flex items-end px-4'
 				id='contacts'
 			>
 				<div className='w-full max-w-[1114px] mx-auto mb-16'>
