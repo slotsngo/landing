@@ -6,6 +6,9 @@ import { faqData } from '@/data/faq';
 import { AdvantagesSlider } from '@/components/AdvantagesSlider';
 import { PlayerProsSlider } from '@/components/PlayerProsSlider';
 import Link from 'next/link';
+import WomanBlock from '@/components/WomanBlock';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
 export default function Home() {
 	const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -17,6 +20,12 @@ export default function Home() {
 				block: 'start',
 			});
 		}
+	};
+
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen);
 	};
 
 	return (
@@ -74,23 +83,107 @@ export default function Home() {
 							Contacts
 						</a>
 					</div>
-					<div className='max-md:hidden'>
-						<a className='button'>My Account</a>
-					</div>
-					<div className='max-md:block hidden'>
+					<div className='hidden max-md:flex gap-4 items-center'>
 						<a className='button-mobile'>
 							<img
 								src='assets/account.svg'
 								alt='account'
 							/>
 						</a>
+						<button
+							onClick={toggleMenu}
+							className='z-50'
+						>
+							{isMenuOpen ? (
+								<X
+									size={50}
+									color='white'
+								/>
+							) : (
+								<Menu
+									size={50}
+									color='white'
+								/>
+							)}
+						</button>
+					</div>
+					<div
+						className={`fixed inset-0 bg-[#1C1F42] z-40 transition-transform duration-300 ${
+							isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+						} max-md:flex flex-col hidden pt-24 px-4 h-fit pb-6 rounded-b-2xl`}
+					>
+						<div className='flex flex-col gap-6 items-center'>
+							<a
+								onClick={(e) => {
+									smoothScroll(e, 'partners');
+									toggleMenu();
+								}}
+								href='#partners'
+								className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							>
+								Slots'n'go Partners
+							</a>
+							<a
+								onClick={(e) => {
+									smoothScroll(e, 'benefits');
+									toggleMenu();
+								}}
+								href='#benefits'
+								className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							>
+								Benefits
+							</a>
+							<a
+								onClick={(e) => {
+									smoothScroll(e, 'cooperation-models');
+									toggleMenu();
+								}}
+								href='#cooperation-models'
+								className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							>
+								Cooperation Models
+							</a>
+							<a
+								onClick={(e) => {
+									smoothScroll(e, 'about-us');
+									toggleMenu();
+								}}
+								href='#about-us'
+								className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							>
+								About Us
+							</a>
+							<a
+								onClick={(e) => {
+									smoothScroll(e, 'faq');
+									toggleMenu();
+								}}
+								href='#faq'
+								className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							>
+								FAQ
+							</a>
+							<a
+								onClick={(e) => {
+									smoothScroll(e, 'contacts');
+									toggleMenu();
+								}}
+								href='#contacts'
+								className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							>
+								Contacts
+							</a>
+						</div>
+					</div>
+					<div className='max-md:hidden'>
+						<a className='button'>My Account</a>
 					</div>
 				</div>
 			</header>
 
 			<main className='flex flex-col gap-[150px] max-md:gap-8 font-[Unbounded] items-center'>
 				<section
-					className='flex flex-col max-w-[1920px] w-full h-[865px] max-md:h-[530px] items-center justify-center max-md:justify-start'
+					className='flex flex-col max-w-[1920px] w-full h-[865px] max-md:h-[530px] items-center justify-center max-md:justify-start max-md:overflow-hidden'
 					id='partners'
 				>
 					<div className='bg-[url(../assets/bg-section.png)] max-md:bg-[url(../assets/bg-section-mobile.png)] bg-cover max-md:bg-contain bg-center max-md:bg-top bg-no-repeat w-full flex justify-center items-end h-full max-md:-mt-12'>
@@ -300,86 +393,7 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className='flex justify-center items-center w-full px-14 max-md:hidden'>
-					<div className='flex flex-row max-w-[1170px] w-full items-start gap-6 rounded-2xl bg-[rgba(255,_255,_255,_0.04)] pl-14 py-14 relative bg-[url(../assets/bg-banner.png)] bg-cover bg-center bg-no-repeat'>
-						<div className='flex flex-col gap-6 max-w-[530px]'>
-							<div className='flex gap-4 flex-col items-start'>
-								<p className='text-white text-[32px] font-semibold uppercase'>
-									START EARNING <br />
-									WITH US TODAY!
-								</p>
-								<p className='text-[#B6C4E7] text-lg font-normal font-[Inter]'>
-									Once you sign up, our manager will reach out to answer any questions you may have and help you get
-									started on your journey to profit!
-								</p>
-							</div>
-							<a className='button'>My Account</a>
-						</div>
-						<div className='min-w-[438px] h-[1px]'>
-							<img
-								className='absolute bottom-0 right-0'
-								src='assets/woman.png'
-								alt='woman'
-							/>
-						</div>
-						<img
-							className='absolute -top-16 right-[45%]'
-							src='assets/coin-1.png'
-							alt='coin'
-						/>
-						<img
-							className='absolute -bottom-16 -left-18'
-							src='assets/coin-2.png'
-							alt='coin'
-						/>
-						<img
-							className='absolute -bottom-22 right-[31%]'
-							src='assets/heart.png'
-							alt='heart'
-						/>
-					</div>
-				</section>
-
-				<section className='flex-col gap-8 hidden max-md:flex'>
-					<div className='flex flex-col relative'>
-						<img
-							className='absolute top-0 z-10 w-[25%]'
-							src='assets/coin-1.png'
-							alt='coin'
-						/>
-						<img
-							className='absolute -bottom-10 -left-5 z-10 w-[25%]'
-							src='assets/coin-2.png'
-							alt='coin'
-						/>
-						<div className='relative overflow-hidden'>
-							<img
-								className='absolute -right-10 bottom-0 z-10 w-[25%]'
-								src='assets/heart.png'
-								alt='heart'
-							/>
-							<img
-								className='w-full'
-								src='assets/woman-mobile.png'
-								alt='woman-mobile'
-							/>
-						</div>
-						<div className='px-4 -mt-7'>
-							<div className='flex flex-col gap-4 pt-4 pb-8 px-5 items-center rounded-2xl bg-[rgba(0,0,0,_0.08)] backdrop-blur-[32px] shadow-[0px_0px_48px_0px_rgba(181,_194,_227,_0.16)_inset] border-2 border-white w-full relative'>
-								<p className='font-semibold uppercase text-white text-center text-[17px]'>
-									START EARNING WITH US TODAY!
-								</p>
-								<div className='flex flex-col justify-center items-center '>
-									<p className='text-[11px] font-semibold uppercase text-[#E7D6B6] text-center font-[Inter]'>
-										Once you sign up, our manager will reach out to answer any questions you may have and help you get
-										started on your journey to profit!
-									</p>
-								</div>
-								<a className='button'>My Account</a>
-							</div>
-						</div>
-					</div>
-				</section>
+				<WomanBlock />
 
 				<section
 					className='flex flex-col gap-8 px-4'
@@ -389,31 +403,62 @@ export default function Home() {
 						Frequently Asked Questions
 					</h2>
 					<div className='flex flex-col max-w-[1400px] mx-auto w-full'>
-						{faqData.map((section, sectionIndex) => (
-							<div
-								key={section.title}
-								className='flex flex-col'
-							>
-								<div className='flex flex-row gap-8 items-center justify-center h-[72px]'>
-									<p
-										className='text-sm font-semibold font-[Inter] uppercase text-start'
-										style={{ color: section.titleColor }}
+						{faqData
+							.filter((section) => section.title === 'General')
+							.map((section, sectionIndex) => (
+								<div
+									key={section.title}
+									className='flex flex-col'
+								>
+									<div className='flex flex-row gap-8 items-center justify-center h-[72px]'>
+										<p
+											className='text-sm font-semibold font-[Inter] uppercase text-start'
+											style={{ color: section.titleColor }}
+										>
+											{section.title}
+										</p>
+										<div className='w-full h-[1px] bg-[rgba(255,_255,_255,_0.16)]'></div>
+									</div>
+									<div className='grid grid-cols-2 max-md:grid-cols-1 gap-x-20 gap-y-2 mb-8'>
+										{section.items.map((item, index) => (
+											<FaqItem
+												key={`${sectionIndex}-${index}`}
+												question={item.question}
+												answer={item.answer}
+											/>
+										))}
+									</div>
+								</div>
+							))}
+						<div className='grid grid-cols-2 max-md:grid-cols-1 gap-x-20 gap-y-2'>
+							{faqData
+								.filter((section) => section.title !== 'General')
+								.map((section, sectionIndex) => (
+									<div
+										key={section.title}
+										className='flex flex-col'
 									>
-										{section.title}
-									</p>
-									<div className='w-full h-[1px] bg-[rgba(255,_255,_255,_0.16)]'></div>
-								</div>
-								<div className='grid grid-cols-2 max-md:grid-cols-1 gap-x-20 gap-y-2 mb-8'>
-									{section.items.map((item, index) => (
-										<FaqItem
-											key={`${sectionIndex}-${index}`}
-											question={item.question}
-											answer={item.answer}
-										/>
-									))}
-								</div>
-							</div>
-						))}
+										<div className='flex flex-row gap-8 items-center justify-center h-[72px]'>
+											<p
+												className='text-sm font-semibold font-[Inter] uppercase text-start'
+												style={{ color: section.titleColor }}
+											>
+												{section.title}
+											</p>
+											<div className='w-full h-[1px] bg-[rgba(255,_255,_255,_0.16)]'></div>
+										</div>
+										<div className='grid grid-cols-1 max-md:grid-cols-1 gap-x-20 gap-y-2 mb-8'>
+											{section.items.map((item, index) => (
+												<FaqItem
+													key={`${sectionIndex}-${index}`}
+													question={item.question}
+													answer={item.answer}
+												/>
+											))}
+										</div>
+									</div>
+								))}
+						</div>
 					</div>
 				</section>
 			</main>

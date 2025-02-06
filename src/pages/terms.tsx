@@ -12,54 +12,59 @@ export default function Terms() {
 							alt='logo'
 						/>
 					</Link>
-					<div className='flex gap-5 font-[Inter]'>
+					<div className='flex gap-5 font-[Inter] max-md:hidden'>
 						<Link
 							href='/#partners'
-							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase cursor-pointer'
 						>
 							Slots'n'go Partners
 						</Link>
 						<Link
 							href='/#benefits'
-							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase cursor-pointer hover:text-white transition-colors'
 						>
 							Benefits
 						</Link>
 						<Link
 							href='/#cooperation-models'
-							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase cursor-pointer hover:text-white transition-colors'
 						>
 							Cooperation Models
 						</Link>
 						<Link
 							href='/#about-us'
-							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase cursor-pointer hover:text-white transition-colors'
 						>
 							About Us
 						</Link>
 						<Link
 							href='/#faq'
-							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase cursor-pointer hover:text-white transition-colors'
 						>
 							FAQ
 						</Link>
 						<Link
 							href='/#contacts'
-							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase'
+							className='text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase cursor-pointer hover:text-white transition-colors'
 						>
 							Contacts
 						</Link>
 					</div>
-					<Link
-						href='#'
-						className='button'
-					>
-						My Account
-					</Link>
+					<div className='max-md:hidden'>
+						<a className='button'>My Account</a>
+					</div>
+					<div className='max-md:block hidden'>
+						<a className='button-mobile'>
+							<img
+								src='/assets/account.svg'
+								alt='account'
+							/>
+						</a>
+					</div>
 				</div>
 			</header>
-			<main className='flex flex-col gap-10 max-w-[1406px] mx-auto py-20 px-4 font-[Unbounded]'>
-				<h1 className='text-white text-[50px] font-semibold uppercase text-center leading-[60px]'>
+			<main className='flex flex-col gap-10 max-w-[1406px] mx-auto py-20 max-md:py-4 px-4 font-[Unbounded]'>
+				<h1 className='text-white text-[50px] max-md:text-2xl font-semibold uppercase text-center'>
 					AFFILIATE PROGRAM AGREEMENT
 					<br />
 					(HEREINAFTER REFERRED TO AS "AGREEMENT")
@@ -333,8 +338,9 @@ export default function Terms() {
 					</section>
 				</div>
 			</main>
-			<section className='flex justify-center items-center my-32'>
-				<div className='flex flex-row max-w-[1170px] w-full items-start gap-6 rounded-2xl bg-[rgba(255,_255,_255,_0.06)] pl-14 py-14 relative bg-[url(../assets/bg-banner.png)] bg-cover bg-center bg-no-repeat'>
+
+			<section className='flex justify-center items-center w-full px-14 max-md:hidden py-20'>
+				<div className='flex flex-row max-w-[1170px] w-full items-start gap-6 rounded-2xl bg-[rgba(255,_255,_255,_0.04)] pl-14 py-14 relative bg-[url(../assets/bg-banner.png)] bg-cover bg-center bg-no-repeat'>
 					<div className='flex flex-col gap-6 max-w-[530px]'>
 						<div className='flex gap-4 flex-col items-start'>
 							<p className='text-white text-[32px] font-semibold uppercase'>
@@ -346,64 +352,103 @@ export default function Terms() {
 								started on your journey to profit!
 							</p>
 						</div>
-						<Link
-							className='button'
-							href='#'
-						>
-							My Account
-						</Link>
+						<a className='button'>My Account</a>
 					</div>
 					<div className='min-w-[438px] h-[1px]'>
 						<img
 							className='absolute bottom-0 right-0'
-							src='assets/woman.png'
+							src='/assets/woman.png'
 							alt='woman'
 						/>
 					</div>
 					<img
 						className='absolute -top-16 right-[45%]'
-						src='assets/coin-1.png'
+						src='/assets/coin-1.png'
 						alt='coin'
 					/>
 					<img
 						className='absolute -bottom-16 -left-18'
-						src='assets/coin-2.png'
+						src='/assets/coin-2.png'
 						alt='coin'
 					/>
 					<img
 						className='absolute -bottom-22 right-[31%]'
-						src='assets/heart.png'
+						src='/assets/heart.png'
 						alt='heart'
 					/>
 				</div>
 			</section>
+
+			<section className='flex-col gap-8 hidden max-md:flex max-md:py-10'>
+				<div className='flex flex-col relative'>
+					<img
+						className='absolute top-0 z-10 w-[25%]'
+						src='/assets/coin-1.png'
+						alt='coin'
+					/>
+					<img
+						className='absolute -bottom-10 -left-5 z-10 w-[25%]'
+						src='/assets/coin-2.png'
+						alt='coin'
+					/>
+					<div className='relative overflow-hidden'>
+						<img
+							className='absolute -right-10 bottom-0 z-10 w-[25%]'
+							src='/assets/heart.png'
+							alt='heart'
+						/>
+						<img
+							className='w-full'
+							src='/assets/woman-mobile.png'
+							alt='woman-mobile'
+						/>
+					</div>
+					<div className='px-4 -mt-7'>
+						<div className='flex flex-col gap-4 pt-4 pb-8 px-5 items-center rounded-2xl bg-[rgba(0,0,0,_0.08)] backdrop-blur-[32px] shadow-[0px_0px_48px_0px_rgba(181,_194,_227,_0.16)_inset] border-2 border-white w-full relative'>
+							<p className='font-semibold uppercase text-white text-center text-[17px]'>START EARNING WITH US TODAY!</p>
+							<div className='flex flex-col justify-center items-center '>
+								<p className='text-[11px] font-semibold uppercase text-[#E7D6B6] text-center font-[Inter]'>
+									Once you sign up, our manager will reach out to answer any questions you may have and help you get
+									started on your journey to profit!
+								</p>
+							</div>
+							<a className='button'>My Account</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<footer
 				className='bg-[url(../assets/bg-footer.svg)] h-[500px] flex items-end px-4'
 				id='contacts'
 			>
-				<div className='w-full max-w-[1114px] mx-auto mb-16'>
-					<p className='text-[32px]/[74px] font-semibold uppercase text-white font-[Unbounded]'>CONTACTS</p>
-					<div className='flex gap-[88px] mt-[33px] mb-[86px] flex-wrap'>
-						<div className='flex flex-col gap-4 items-start'>
+				<div className='w-full max-w-[1114px] mx-auto mb-16 max-md:mb-8'>
+					<p className='text-[32px]/[74px] font-semibold uppercase text-white font-[Unbounded] max-md:text-center'>
+						CONTACTS
+					</p>
+					<div className='flex gap-[88px] max-md:gap-6 mt-[33px] max-md:mt-6 mb-[86px] max-md:mb-11 flex-wrap max-md:flex-col'>
+						<div className='flex flex-col gap-4 max-md:gap-1 items-start max-md:items-center'>
 							<p className='text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter]'>
 								Email address for additional information
 							</p>
-							<p className='text-white text-[26px] font-semibold uppercase font-[Unbounded]'>
+							<p className='text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]'>
 								partner.support@slotsngo.io
 							</p>
 						</div>
-						<div className='flex flex-col gap-4 items-start'>
+						<div className='flex flex-col gap-4 max-md:gap-1 items-start max-md:items-center'>
 							<p className='text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter]'>telegram</p>
-							<p className='text-white text-[26px] font-semibold uppercase font-[Unbounded]'>@slotsngo_support</p>
+							<p className='text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]'>
+								@slotsngo_support
+							</p>
 						</div>
 					</div>
-					<div className='flex flex-row gap-10'>
-						<p className='text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter]'>
+					<div className='flex flex-row gap-10 max-md:flex-col-reverse max-md:items-center'>
+						<p className='text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter] max-md:text-center'>
 							ALL RIGHTS RESERVED ©2024 — partners.slotsngo.io
 						</p>
 						<Link
-							className='text-[#E7D6B6] text-sm font-semibold uppercase font-[Inter]'
-							href='/terms/'
+							className='text-[#E7D6B6] text-sm font-semibold uppercase font-[Inter] max-md:text-center'
+							href='/terms'
 						>
 							terms and conditions
 						</Link>

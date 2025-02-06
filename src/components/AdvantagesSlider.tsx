@@ -57,7 +57,7 @@ export const AdvantagesSlider = () => {
 
 	const springConfig = { stiffness: 300, damping: 30, restDelta: 0.001 };
 	const x = useSpring(
-		useTransform(scrollYProgress, [0.3, 0.7], [0, -(advantages.length - 3) * width]), // 390px width + 8px gap
+		useTransform(scrollYProgress, [0.3, 0.7], [0, -(advantages.length - 1) * width]), // 390px width + 8px gap
 		springConfig,
 	);
 
