@@ -22,7 +22,7 @@ export const FaqItem = ({ question, answer }: FaqItemProps) => {
 				transition={{ duration: 0.2 }}
 			>
 				<p className='text-white text-lg font-bold font-[Inter]'>{question}</p>
-				<motion.div
+				{/* <motion.div
 					initial={false}
 					animate={{ rotate: isOpen ? 180 : 0 }}
 					transition={{ duration: 0.3 }}
@@ -42,7 +42,7 @@ export const FaqItem = ({ question, answer }: FaqItemProps) => {
 							strokeLinejoin='round'
 						/>
 					</svg>
-				</motion.div>
+				</motion.div> */}
 			</motion.div>
 
 			<AnimatePresence>

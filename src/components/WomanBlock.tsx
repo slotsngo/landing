@@ -14,7 +14,12 @@ export default function WomanBlock() {
 								started on your journey to profit!
 							</p>
 						</div>
-						<a className='button'>My Account</a>
+						<a
+							className='button'
+							href='https://my.slotsngo-partners.com/registration'
+						>
+							My Account
+						</a>
 					</div>
 					<div className='min-w-[438px] h-[1px]'>
 						<img
@@ -74,7 +79,12 @@ export default function WomanBlock() {
 									started on your journey to profit!
 								</p>
 							</div>
-							<a className='button'>My Account</a>
+							<a
+								className='button'
+								href='https://my.slotsngo-partners.com/registration'
+							>
+								My Account
+							</a>
 						</div>
 					</div>
 				</div>

@@ -1,9 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
+import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Terms() {
 	return (
 		<>
+			<Head>
+				<title>Slots&apos;n&apos;Go | Terms of Service</title>
+			</Head>
 			<header className='flex items-center bg-[rgba(255,_255,_255,_0.04)] backdrop-filter backdrop-blur-xl py-6 px-4'>
 				<div className='flex justify-between items-center max-w-[1406px] w-full mx-auto'>
 					<Link href='/'>
@@ -352,7 +356,12 @@ export default function Terms() {
 								started on your journey to profit!
 							</p>
 						</div>
-						<a className='button'>My Account</a>
+						<a
+							className='button'
+							href='https://my.slotsngo-partners.com/registration'
+						>
+							My Account
+						</a>
 					</div>
 					<div className='min-w-[438px] h-[1px]'>
 						<img
@@ -412,7 +421,12 @@ export default function Terms() {
 									started on your journey to profit!
 								</p>
 							</div>
-							<a className='button'>My Account</a>
+							<a
+								className='button'
+								href='https://my.slotsngo-partners.com/registration'
+							>
+								My Account
+							</a>
 						</div>
 					</div>
 				</div>
