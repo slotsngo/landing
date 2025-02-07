@@ -493,7 +493,7 @@ export default function Home() {
 						</p>
 						<Link
 							className='text-[#E7D6B6] text-sm font-semibold uppercase font-[Inter] max-md:text-center'
-							href='/terms'
+							href='/terms/index.html'
 						>
 							terms and conditions
 						</Link>

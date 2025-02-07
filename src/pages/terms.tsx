@@ -8,7 +8,7 @@ export default function Terms() {
 				<div className='flex justify-between items-center max-w-[1406px] w-full mx-auto'>
 					<Link href='/'>
 						<img
-							src='/assets/logo.svg'
+							src='../assets/logo.svg'
 							alt='logo'
 						/>
 					</Link>
@@ -56,7 +56,7 @@ export default function Terms() {
 					<div className='max-md:block hidden'>
 						<a className='button-mobile'>
 							<img
-								src='/assets/account.svg'
+								src='../assets/account.svg'
 								alt='account'
 							/>
 						</a>
@@ -357,23 +357,23 @@ export default function Terms() {
 					<div className='min-w-[438px] h-[1px]'>
 						<img
 							className='absolute bottom-0 right-0'
-							src='/assets/woman.png'
+							src='../assets/woman.png'
 							alt='woman'
 						/>
 					</div>
 					<img
 						className='absolute -top-16 right-[45%]'
-						src='/assets/coin-1.png'
+						src='../assets/coin-1.png'
 						alt='coin'
 					/>
 					<img
 						className='absolute -bottom-16 -left-18'
-						src='/assets/coin-2.png'
+						src='../assets/coin-2.png'
 						alt='coin'
 					/>
 					<img
 						className='absolute -bottom-22 right-[31%]'
-						src='/assets/heart.png'
+						src='../assets/heart.png'
 						alt='heart'
 					/>
 				</div>
@@ -383,23 +383,23 @@ export default function Terms() {
 				<div className='flex flex-col relative'>
 					<img
 						className='absolute top-0 z-10 w-[25%]'
-						src='/assets/coin-1.png'
+						src='../assets/coin-1.png'
 						alt='coin'
 					/>
 					<img
 						className='absolute -bottom-10 -left-5 z-10 w-[25%]'
-						src='/assets/coin-2.png'
+						src='../assets/coin-2.png'
 						alt='coin'
 					/>
 					<div className='relative overflow-hidden'>
 						<img
 							className='absolute -right-10 bottom-0 z-10 w-[25%]'
-							src='/assets/heart.png'
+							src='../assets/heart.png'
 							alt='heart'
 						/>
 						<img
 							className='w-full'
-							src='/assets/woman-mobile.png'
+							src='../assets/woman-mobile.png'
 							alt='woman-mobile'
 						/>
 					</div>
