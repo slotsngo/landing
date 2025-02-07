@@ -232,7 +232,7 @@ export default function Home() {
 				<WomanBlock />
 
 				<section
-					className='flex flex-col gap-8 px-4'
+					className='flex flex-col gap-8 px-4 w-full'
 					id='faq'
 				>
 					<SectionTitle>Frequently Asked Questions</SectionTitle>
