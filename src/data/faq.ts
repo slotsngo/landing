@@ -4,6 +4,7 @@ interface FaqSection {
 	items: {
 		question: string;
 		answer: string;
+		link?: string;
 	}[];
 }
 

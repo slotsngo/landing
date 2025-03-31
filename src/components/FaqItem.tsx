@@ -33,7 +33,28 @@ export const FaqItem = ({ question, answer }: FaqItemProps) => {
 							className='overflow-hidden'
 						>
 							<div className=''>
-								<p className='text-sm text-[#B6C4E7] font-normal font-[Inter]'>{answer}</p>
+								{answer.includes('https://') ? (
+									<p className='text-sm text-[#B6C4E7] font-normal font-[Inter]'>
+										{answer.split(/(https?:\/\/[^\s,]+)/).map((part, index) => {
+											if (part.match(/^https?:\/\/[^\s,]+$/)) {
+												return (
+													<a
+														key={index}
+														href={part}
+														target='_blank'
+														rel='noopener noreferrer'
+														className='text-[#E7D6B6] hover:underline'
+													>
+														{part}
+													</a>
+												);
+											}
+											return <span key={index}>{part}</span>;
+										})}
+									</p>
+								) : (
+									<p className='text-sm text-[#B6C4E7] font-normal font-[Inter]'>{answer}</p>
+								)}
 							</div>
 						</motion.div>
 					)}

@@ -445,20 +445,26 @@ export default function Terms() {
 							<p className='text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter]'>
 								Email address for additional information
 							</p>
-							<p className='text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]'>
+							<a
+								href='mailto:partner.support@slotsngo.io'
+								className='text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]'
+							>
 								partner.support@slotsngo.io
-							</p>
+							</a>
 						</div>
 						<div className='flex flex-col gap-4 max-md:gap-1 items-start max-md:items-center'>
 							<p className='text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter]'>telegram</p>
-							<p className='text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]'>
+							<a
+								href='https://t.me/slotsngo_support'
+								className='text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]'
+							>
 								@slotsngo_support
-							</p>
+							</a>
 						</div>
 					</div>
 					<div className='flex flex-row gap-10 max-md:flex-col-reverse max-md:items-center'>
 						<p className='text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter] max-md:text-center'>
-							ALL RIGHTS RESERVED ©2024 — partners.slotsngo.io
+							ALL RIGHTS RESERVED ©2025 — partners.slotsngo.io
 						</p>
 						<Link
 							className='text-[#E7D6B6] text-sm font-semibold uppercase font-[Inter] max-md:text-center'
